@@ -18,7 +18,7 @@ if st.button('Generate Money'):
 
 def fetch_side_hustles():
     try:
-        response = requests.get('http://127.0.0.1:8000/side_hustles?apiKey=12345')
+        response = requests.get('https://fast-api-with-using-python.vercel.app/side_hustles?apiKey=12345')
         if response.status_code == 200:
             hustles = response.json()
             return hustles['side_hustles']
@@ -39,7 +39,7 @@ if st.button('Generate Ideas'):
 
 def get_money_quotes():
     try:
-        response = requests.get('http://127.0.0.1:8000/money_quotes?apiKey=12345678911')
+        response = requests.get('https://fast-api-with-using-python.vercel.app/money_quotes?apiKey=12345678911')
         if response.status_code == 200:
             quotes = response.json()
             return quotes['money_quotes']
